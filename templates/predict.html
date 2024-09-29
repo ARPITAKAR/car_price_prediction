@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.Age.label }}
+        {{ form.Age }}
+        {% if form.Age.errors %}
+            {% for error in form.Age.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.brand.label }}
+        {{ form.brand }}
+        {% if form.brand.errors %}
+            {% for error in form.brand.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Milage.label }}
+        {{ form.Milage }}
+        {% if form.Milage.errors %}
+            {% for error in form.Milage.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.fuel_type.label }}
+        {{ form.fuel_type }}
+        {% if form.fuel_type.errors %}
+            {% for error in form.fuel_type.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.ext_col.label }}
+        {{ form.ext_col }}
+        {% if form.ext_col.errors %}
+            {% for error in form.ext_col.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.int_col.label }}
+        {{ form.int_col }}
+        {% if form.int_col.errors %}
+            {% for error in form.int_col.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.accident.label }}
+        {{ form.accident }}
+        {% if form.accident.errors %}
+            {% for error in form.accident.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.clean_title.label }}
+        {{ form.clean_title }}
+        {% if form.clean_title.errors %}
+            {% for error in form.clean_title.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.horsepower.label }}
+        {{ form.horsepower }}
+        {% if form.horsepower.errors %}
+            {% for error in form.horsepower.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <br>
+    <div>
+        {{ form.engine_capacity.label }}
+        {{ form.engine_capacity }}
+        {% if form.engine_capacity.errors %}
+            {% for error in form.engine_capacity.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <br>
+    <div>
+        {{ form.cylinders.label }}
+        {{ form.cylinders }}
+        {% if form.cylinders.errors %}
+            {% for error in form.cylinders.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+{% endblock content %}
